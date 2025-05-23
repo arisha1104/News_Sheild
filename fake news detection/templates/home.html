@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fake News Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Enhanced Styling for Home Section */
+        .home-container {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 60px 40px;
+            margin-top: 170px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .home-container h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            color: #ece1db;
+            text-shadow: 0 0 10px rgba(194, 62, 6, 0.7);
+        }
+
+        .home-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .home-button,
+        .logout-btn {
+            padding: 16px 40px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+            min-width: 260px;
+            background: linear-gradient(135deg, #ff5722, #ff8a50);
+            color: white;
+            box-shadow: 0 0 10px #ff5722, 0 0 20px rgba(255, 87, 34, 0.5);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .home-button i,
+        .logout-btn i {
+            margin-right: 10px;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        .home-button:hover,
+        .logout-btn:hover {
+            background: linear-gradient(135deg, #ff7043, #e64a19);
+            box-shadow: 0 0 20px #ff7043, 0 0 30px rgba(255, 112, 67, 0.6);
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        /* Tooltip */
+        .home-button[title],
+        .logout-btn[title] {
+            position: relative;
+        }
+
+        .home-button[title]:hover::after,
+        .logout-btn[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 14px;
+            z-index: 999;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('set_language') }}" method="POST" style="position: absolute; top: 20px; right: 30px;">
+        <select name="language" onchange="this.form.submit()" style="padding: 6px; border-radius: 5px;">
+            <option value="en" {% if get_locale() == 'en' %}selected{% endif %}>English</option>
+            <option value="hi" {% if get_locale() == 'hi' %}selected{% endif %}>हिन्दी</option>
+            <option value="pa" {% if get_locale() == 'pa' %}selected{% endif %}>ਪੰਜਾਬੀ</option>
+        </select>
+    </form>
+    
+      
+    <div class="background"></div>
+
+    <div class="home-container">
+        <h1>Welcome to Fake News Detector</h1>
+        
+        <div class="home-options">
+            <a href="{{ url_for('predict') }}" class="home-button" title="Check news from dataset">
+                <i class="fas fa-database"></i>Check Dataset
+            </a>
+
+            <a href="{{ url_for('real_time_search') }}" class="home-button" title="Search and analyze live news">
+                <i class="fas fa-search"></i>Search Real-Time News
+            </a>
+
+            <form action="{{ url_for('logout') }}" method="GET" style="display: inline;">
+                <button type="submit" class="logout-btn" title="Logout and return to login page">
+                    <i class="fas fa-sign-out-alt"></i>Logout
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

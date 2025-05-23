@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time News Search</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+            overflow-y: auto;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/static/rishabh-sharma-R-js25Pv1LQ-unsplash.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: zoomMove 30s infinite alternate linear;
+            z-index: -1;
+        }
+
+        @keyframes zoomMove {
+            0% {
+                transform: scale(1);
+                background-position: center center;
+            }
+            100% {
+                transform: scale(1.1);
+                background-position: center bottom;
+            }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 0;
+            margin-top: 120px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+            width: 100%;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            height: 40px;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            display: block;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Message styling */
+        .message {
+            color: #ff5722;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <h1>Search for Real-Time News</h1>
+        <form action="/real_time_search" method="POST">
+            <input type="text" name="query" placeholder="Enter search query" required>
+            <button type="submit">Search</button>
+        </form>
+
+        {% if message %}
+        <div class="message">{{ message }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

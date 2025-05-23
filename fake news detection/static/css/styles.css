@@ -1,0 +1,204 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    overflow-y: auto;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Background Animation */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/rishabh-sharma-R-js25Pv1LQ-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: zoomMove 30s infinite alternate linear;
+    z-index: -1;
+}
+
+@keyframes zoomMove {
+    0% {
+        transform: scale(1);
+        background-position: center center;
+    }
+    100% {
+        transform: scale(1.1);
+        background-position: center bottom;
+    }
+}
+
+/* Content Container */
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 0;
+    margin-top: 120px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    width: 100%;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+/* Textarea (for dataset and input) */
+textarea {
+    width: 70%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Input Fields (Login) */
+input[type="text"], input[type="password"] {
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    display: block;
+}
+
+/* Button Styling */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+/* Loading Message */
+#loading {
+    display: none;
+    font-size: 16px;
+    color: yellow;
+    margin-top: 10px;
+}
+
+/* Result Styling */
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgreen;
+}
+
+/* Articles Section */
+#articles {
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+    width: 80%;
+}
+
+.article {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 5px;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Home Page Welcome Message */
+.home-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    margin-top: 170px; 
+    width: 100%;     /* full width */
+    border-radius: 0; /* remove rounding if touching edges */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    color: white;
+    text-align: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    position: absolute;
+    letter-spacing: 1px;
+    overflow-y: hidden;
+}
+
+.home-container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.home-options {
+    margin-top: 20px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #e64a19;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.logout-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Login Form */
+.login-container {
+    background: rgba(10, 0, 10, 0.7);
+    padding: 40px;
+    border-radius: 0;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+h1 {
+    font-size: 35px;
+    color: white;
+    margin-bottom: 20px;
+}
