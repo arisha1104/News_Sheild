@@ -2,8 +2,6 @@ from flask import Flask, request, redirect, url_for, render_template, session, j
 import pickle
 import pandas as pd
 import requests
-from flask_babel import Babel, get_locale
-
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Used for sessions
@@ -28,13 +26,6 @@ df = pd.read_csv("cleaned_news.csv")
 NEWS_API_KEY = "4b8cf0c10896486eb505cf15948d9df1"
 NEWS_API_URL = "https://newsapi.org/v2/everything"
 
-
-app.config['BABEL_DEFAULT_LOCALE'] = 'en'
-babel = Babel(app)
-
-@babel.locale_selector_func
-def select_locale():
-    return session.get('language', 'en')
 
 
 @app.route("/")
