@@ -1,0 +1,327 @@
+2025-06-18 07:57:46,464 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 07:57:46,466 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 07:57:46,472 - INFO -  * Restarting with stat
+2025-06-18 07:57:48,916 - WARNING -  * Debugger is active!
+2025-06-18 07:57:48,933 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 07:57:57,712 - INFO - 127.0.0.1 - - [18/Jun/2025 07:57:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 07:57:57,879 - INFO - 127.0.0.1 - - [18/Jun/2025 07:57:57] "GET /home HTTP/1.1" 200 -
+2025-06-18 07:58:03,492 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:03] "GET /history HTTP/1.1" 200 -
+2025-06-18 07:58:04,890 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:04] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 07:58:23,574 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:23] "POST /predict HTTP/1.1" 200 -
+2025-06-18 07:58:39,977 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 07:58:40,000 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:40] "GET /home HTTP/1.1" 200 -
+2025-06-18 07:58:42,079 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:42] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+2025-06-18 07:58:48,019 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:48] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 07:58:49,915 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:49] "GET /history HTTP/1.1" 200 -
+2025-06-18 07:58:51,331 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:51] "GET /settings HTTP/1.1" 200 -
+2025-06-18 07:58:52,883 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:52] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+2025-06-18 07:58:58,199 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:58] "GET /history HTTP/1.1" 200 -
+2025-06-18 07:58:59,292 - INFO - 127.0.0.1 - - [18/Jun/2025 07:58:59] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 07:59:01,419 - INFO - 127.0.0.1 - - [18/Jun/2025 07:59:01] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+2025-06-18 07:59:05,553 - INFO - 127.0.0.1 - - [18/Jun/2025 07:59:05] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 07:59:27,491 - INFO - 127.0.0.1 - - [18/Jun/2025 07:59:27] "POST /predict HTTP/1.1" 200 -
+2025-06-18 07:59:45,907 - INFO - 127.0.0.1 - - [18/Jun/2025 07:59:45] "POST /predict HTTP/1.1" 200 -
+2025-06-18 08:00:15,577 - INFO - 127.0.0.1 - - [18/Jun/2025 08:00:15] "POST /predict HTTP/1.1" 200 -
+2025-06-18 08:09:34,194 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 08:09:34,195 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 08:09:34,199 - INFO -  * Restarting with stat
+2025-06-18 08:09:36,332 - WARNING -  * Debugger is active!
+2025-06-18 08:09:36,347 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 08:12:42,693 - INFO - 127.0.0.1 - - [18/Jun/2025 08:12:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 08:12:42,926 - INFO - 127.0.0.1 - - [18/Jun/2025 08:12:42] "GET /home HTTP/1.1" 200 -
+2025-06-18 09:44:21,997 - INFO - 127.0.0.1 - - [18/Jun/2025 09:44:21] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 09:44:41,447 - INFO - 127.0.0.1 - - [18/Jun/2025 09:44:41] "POST /predict HTTP/1.1" 200 -
+2025-06-18 09:44:48,254 - INFO - 127.0.0.1 - - [18/Jun/2025 09:44:48] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+2025-06-18 09:44:53,125 - INFO - 127.0.0.1 - - [18/Jun/2025 09:44:53] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 09:44:53,141 - INFO - 127.0.0.1 - - [18/Jun/2025 09:44:53] "GET /home HTTP/1.1" 200 -
+2025-06-18 09:49:14,626 - INFO -  * Detected change in 'D:\\btech study\\fake news AI\\News_Sheild\\fake news detection\\main.py', reloading
+2025-06-18 09:49:17,618 - INFO -  * Restarting with stat
+2025-06-18 09:49:25,139 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 09:49:25,141 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 09:49:25,144 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 09:49:25,236 - WARNING -  * Debugger is active!
+2025-06-18 09:49:25,266 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 09:52:25,988 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 09:52:25,989 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 09:52:25,990 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 09:52:26,103 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 09:52:26,104 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 09:52:26,108 - INFO -  * Restarting with stat
+2025-06-18 09:52:28,171 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 09:52:28,172 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 09:52:28,174 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 09:52:28,245 - WARNING -  * Debugger is active!
+2025-06-18 09:52:28,252 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 09:52:43,322 - INFO - 127.0.0.1 - - [18/Jun/2025 09:52:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 09:52:43,711 - INFO - 127.0.0.1 - - [18/Jun/2025 09:52:43] "GET /home HTTP/1.1" 200 -
+2025-06-18 09:52:47,005 - INFO - 127.0.0.1 - - [18/Jun/2025 09:52:47] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 09:53:15,128 - INFO - 127.0.0.1 - - [18/Jun/2025 09:53:15] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-18 09:53:19,364 - INFO - 127.0.0.1 - - [18/Jun/2025 09:53:19] "[35m[1mPOST /predict_dataset HTTP/1.1[0m" 500 -
+2025-06-18 09:59:38,261 - INFO - 127.0.0.1 - - [18/Jun/2025 09:59:38] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-06-18 10:03:17,073 - INFO -  * Detected change in 'D:\\btech study\\fake news AI\\News_Sheild\\fake news detection\\main.py', reloading
+2025-06-18 10:03:17,363 - INFO -  * Restarting with stat
+2025-06-18 10:03:20,578 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 10:03:20,578 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 10:03:20,581 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 10:03:20,671 - WARNING -  * Debugger is active!
+2025-06-18 10:03:20,681 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 10:04:17,845 - INFO -  * Detected change in 'D:\\btech study\\fake news AI\\News_Sheild\\fake news detection\\main.py', reloading
+2025-06-18 10:04:18,057 - INFO -  * Restarting with stat
+2025-06-18 10:04:20,427 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 10:04:20,428 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 10:04:20,430 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 10:04:20,491 - WARNING -  * Debugger is active!
+2025-06-18 10:04:20,499 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 10:04:45,733 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 10:04:45,734 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 10:04:45,735 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 10:04:45,815 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 10:04:45,816 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 10:04:45,820 - INFO -  * Restarting with stat
+2025-06-18 10:04:47,747 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 10:04:47,748 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 10:04:47,750 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 10:04:47,880 - WARNING -  * Debugger is active!
+2025-06-18 10:04:47,892 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 10:05:01,434 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:01] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 10:05:01,645 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:01] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:05:04,408 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:04] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:05:07,950 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:07] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 10:05:11,557 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:11] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-06-18 10:05:14,772 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:14] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 10:05:15,848 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:15] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-06-18 10:05:18,408 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:18] "GET /history HTTP/1.1" 200 -
+2025-06-18 10:05:19,597 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:19] "GET /settings HTTP/1.1" 200 -
+2025-06-18 10:05:20,691 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:20] "GET /history HTTP/1.1" 200 -
+2025-06-18 10:05:21,952 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:21] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-06-18 10:05:24,878 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 10:05:24,896 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:24] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:05:26,508 - INFO - 127.0.0.1 - - [18/Jun/2025 10:05:26] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-06-18 10:11:40,849 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 10:11:40,849 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 10:11:40,850 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 10:11:40,903 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 10:11:40,904 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 10:11:40,906 - INFO -  * Restarting with stat
+2025-06-18 10:11:42,237 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-18 10:11:42,238 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-18 10:11:42,238 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 10:11:42,269 - WARNING -  * Debugger is active!
+2025-06-18 10:11:42,272 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 10:11:48,103 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:48] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 10:11:48,263 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:48] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:11:50,347 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:50] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:11:51,933 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:51] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 10:11:53,542 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:53] "GET /history HTTP/1.1" 200 -
+2025-06-18 10:11:54,954 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:54] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 10:11:56,382 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:56] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:11:57,884 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:57] "GET /history HTTP/1.1" 200 -
+2025-06-18 10:11:59,197 - INFO - 127.0.0.1 - - [18/Jun/2025 10:11:59] "GET /settings HTTP/1.1" 200 -
+2025-06-18 10:12:00,358 - INFO - 127.0.0.1 - - [18/Jun/2025 10:12:00] "GET /history HTTP/1.1" 200 -
+2025-06-18 10:12:02,410 - INFO - 127.0.0.1 - - [18/Jun/2025 10:12:02] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 10:12:30,922 - INFO - 127.0.0.1 - - [18/Jun/2025 10:12:30] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-18 10:12:46,499 - INFO - 127.0.0.1 - - [18/Jun/2025 10:12:46] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:12:56,453 - INFO - 127.0.0.1 - - [18/Jun/2025 10:12:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 10:12:56,468 - INFO - 127.0.0.1 - - [18/Jun/2025 10:12:56] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:13:03,545 - INFO - 127.0.0.1 - - [18/Jun/2025 10:13:03] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-06-18 10:13:06,499 - INFO - 127.0.0.1 - - [18/Jun/2025 10:13:06] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 10:13:08,562 - INFO - 127.0.0.1 - - [18/Jun/2025 10:13:08] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:13:15,307 - INFO - 127.0.0.1 - - [18/Jun/2025 10:13:15] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 10:13:15,336 - INFO - 127.0.0.1 - - [18/Jun/2025 10:13:15] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:15:12,543 - INFO - 127.0.0.1 - - [18/Jun/2025 10:15:12] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:15:14,392 - INFO - 127.0.0.1 - - [18/Jun/2025 10:15:14] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:15:16,398 - INFO - 127.0.0.1 - - [18/Jun/2025 10:15:16] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 10:15:16,420 - INFO - 127.0.0.1 - - [18/Jun/2025 10:15:16] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:15:17,966 - INFO - 127.0.0.1 - - [18/Jun/2025 10:15:17] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:15:54,881 - INFO - 127.0.0.1 - - [18/Jun/2025 10:15:54] "[35m[1mPOST /predict_dataset HTTP/1.1[0m" 500 -
+2025-06-18 10:19:52,951 - ERROR - Could not load logistic_model.pkl: No module named 'sklearn'
+2025-06-18 10:19:52,953 - ERROR - Could not load tfidf_vectorizer.pkl: No module named 'sklearn'
+2025-06-18 10:19:52,954 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 10:19:53,006 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 10:19:53,008 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 10:19:53,010 - INFO -  * Restarting with stat
+2025-06-18 10:19:54,317 - ERROR - Could not load logistic_model.pkl: No module named 'sklearn'
+2025-06-18 10:19:54,319 - ERROR - Could not load tfidf_vectorizer.pkl: No module named 'sklearn'
+2025-06-18 10:19:54,320 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-18 10:19:54,347 - WARNING -  * Debugger is active!
+2025-06-18 10:19:54,354 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 10:20:21,071 - INFO - 127.0.0.1 - - [18/Jun/2025 10:20:21] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 10:20:21,190 - INFO - 127.0.0.1 - - [18/Jun/2025 10:20:21] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:20:23,391 - INFO - 127.0.0.1 - - [18/Jun/2025 10:20:23] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:20:33,360 - INFO - 127.0.0.1 - - [18/Jun/2025 10:20:33] "[35m[1mPOST /predict_dataset HTTP/1.1[0m" 500 -
+2025-06-18 10:25:12,183 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 10:25:12,190 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 10:25:12,200 - INFO -  * Restarting with stat
+2025-06-18 10:25:34,132 - WARNING -  * Debugger is active!
+2025-06-18 10:25:34,292 - INFO -  * Debugger PIN: 121-500-353
+2025-06-18 10:25:34,942 - INFO - 127.0.0.1 - - [18/Jun/2025 10:25:34] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 10:25:34,984 - INFO - 127.0.0.1 - - [18/Jun/2025 10:25:34] "GET /home HTTP/1.1" 200 -
+2025-06-18 10:25:39,178 - INFO - 127.0.0.1 - - [18/Jun/2025 10:25:39] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 10:25:53,809 - INFO - 127.0.0.1 - - [18/Jun/2025 10:25:53] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-18 10:27:23,558 - INFO - 127.0.0.1 - - [18/Jun/2025 10:27:23] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-18 10:27:35,743 - INFO - 127.0.0.1 - - [18/Jun/2025 10:27:35] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 10:27:40,475 - INFO - 127.0.0.1 - - [18/Jun/2025 10:27:40] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-18 17:07:05,584 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:05] "GET /history HTTP/1.1" 200 -
+2025-06-18 17:07:07,401 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:07] "GET /settings HTTP/1.1" 200 -
+2025-06-18 17:07:09,269 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:09] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-06-18 17:07:13,679 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:13] "GET /history HTTP/1.1" 200 -
+2025-06-18 17:07:14,976 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:14] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 17:07:16,244 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:16] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 17:07:17,829 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 17:07:17,841 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:17] "GET /home HTTP/1.1" 200 -
+2025-06-18 17:07:20,948 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:20] "GET /settings HTTP/1.1" 200 -
+2025-06-18 17:07:23,246 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:23] "[33mGET /predict HTTP/1.1[0m" 404 -
+2025-06-18 17:07:27,422 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 17:07:27,431 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:27] "GET /home HTTP/1.1" 200 -
+2025-06-18 17:07:35,007 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:35] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 17:07:44,032 - INFO - 127.0.0.1 - - [18/Jun/2025 17:07:44] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 17:08:06,601 - INFO - 127.0.0.1 - - [18/Jun/2025 17:08:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-18 17:08:06,612 - INFO - 127.0.0.1 - - [18/Jun/2025 17:08:06] "GET /home HTTP/1.1" 200 -
+2025-06-18 17:09:33,349 - INFO - 127.0.0.1 - - [18/Jun/2025 17:09:33] "GET /home HTTP/1.1" 200 -
+2025-06-18 17:29:12,215 - INFO - 127.0.0.1 - - [18/Jun/2025 17:29:12] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 17:29:13,343 - INFO - 127.0.0.1 - - [18/Jun/2025 17:29:13] "GET /history HTTP/1.1" 200 -
+2025-06-18 17:29:14,657 - INFO - 127.0.0.1 - - [18/Jun/2025 17:29:14] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 17:29:16,577 - INFO - 127.0.0.1 - - [18/Jun/2025 17:29:16] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-18 17:29:17,709 - INFO - 127.0.0.1 - - [18/Jun/2025 17:29:17] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 17:29:22,045 - INFO - 127.0.0.1 - - [18/Jun/2025 17:29:22] "GET /history HTTP/1.1" 200 -
+2025-06-18 17:29:23,384 - INFO - 127.0.0.1 - - [18/Jun/2025 17:29:23] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-18 17:30:31,535 - INFO - 127.0.0.1 - - [18/Jun/2025 17:30:31] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-18 17:31:05,179 - INFO - 127.0.0.1 - - [18/Jun/2025 17:31:05] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-19 12:22:47,560 - INFO - 127.0.0.1 - - [19/Jun/2025 12:22:47] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-19 21:52:50,725 - INFO -  * Detected change in 'D:\\btech study\\fake news AI\\News_Sheild\\fake news detection\\main.py', reloading
+2025-06-19 21:52:56,085 - INFO -  * Restarting with stat
+2025-06-19 21:53:37,746 - ERROR - Could not load cleaned_news.csv: 
+2025-06-19 22:15:43,569 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-19 22:15:43,570 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 22:15:43,578 - INFO -  * Restarting with stat
+2025-06-19 22:15:54,296 - WARNING -  * Debugger is active!
+2025-06-19 22:15:54,334 - INFO -  * Debugger PIN: 121-500-353
+2025-06-19 22:16:17,618 - INFO - 127.0.0.1 - - [19/Jun/2025 22:16:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-19 22:16:18,157 - INFO - 127.0.0.1 - - [19/Jun/2025 22:16:18] "GET /home HTTP/1.1" 200 -
+2025-06-19 22:16:30,228 - INFO - 127.0.0.1 - - [19/Jun/2025 22:16:30] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-19 22:16:31,864 - INFO - 127.0.0.1 - - [19/Jun/2025 22:16:31] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-19 22:16:58,996 - INFO - 127.0.0.1 - - [19/Jun/2025 22:16:58] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-19 22:17:13,469 - INFO - 127.0.0.1 - - [19/Jun/2025 22:17:13] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-19 23:20:32,934 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-19 23:20:32,936 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-19 23:20:32,938 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-19 23:20:33,102 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-19 23:20:33,103 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 23:20:33,110 - INFO -  * Restarting with stat
+2025-06-19 23:20:35,393 - ERROR - Could not load logistic_model.pkl: [Errno 2] No such file or directory: 'logistic_model.pkl'
+2025-06-19 23:20:35,393 - ERROR - Could not load tfidf_vectorizer.pkl: [Errno 2] No such file or directory: 'tfidf_vectorizer.pkl'
+2025-06-19 23:20:35,394 - ERROR - Could not load cleaned_news.csv: [Errno 2] No such file or directory: 'cleaned_news.csv'
+2025-06-19 23:20:35,429 - WARNING -  * Debugger is active!
+2025-06-19 23:20:35,450 - INFO -  * Debugger PIN: 121-500-353
+2025-06-19 23:21:47,107 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-19 23:21:47,108 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 23:21:47,116 - INFO -  * Restarting with stat
+2025-06-19 23:21:56,341 - WARNING -  * Debugger is active!
+2025-06-19 23:21:56,356 - INFO -  * Debugger PIN: 121-500-353
+2025-06-19 23:37:29,180 - INFO - 127.0.0.1 - - [19/Jun/2025 23:37:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-19 23:37:29,862 - INFO - 127.0.0.1 - - [19/Jun/2025 23:37:29] "GET /home HTTP/1.1" 200 -
+2025-06-19 23:37:34,532 - INFO - 127.0.0.1 - - [19/Jun/2025 23:37:34] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-19 23:37:42,436 - INFO - 127.0.0.1 - - [19/Jun/2025 23:37:42] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-20 06:49:26,726 - INFO -  * Detected change in 'D:\\btech study\\fake news AI\\News_Sheild\\fake news detection\\main.py', reloading
+2025-06-20 06:49:34,159 - INFO -  * Restarting with stat
+2025-06-20 06:49:52,974 - WARNING -  * Debugger is active!
+2025-06-20 06:49:53,032 - INFO -  * Debugger PIN: 121-500-353
+2025-06-20 06:51:29,175 - INFO -  * Detected change in 'D:\\btech study\\fake news AI\\News_Sheild\\fake news detection\\main.py', reloading
+2025-06-20 06:51:29,867 - INFO -  * Restarting with stat
+2025-06-20 06:51:45,418 - WARNING -  * Debugger is active!
+2025-06-20 06:51:45,451 - INFO -  * Debugger PIN: 121-500-353
+2025-06-20 06:55:33,510 - INFO -  * Detected change in 'D:\\btech study\\fake news AI\\News_Sheild\\fake news detection\\main.py', reloading
+2025-06-20 06:55:35,039 - INFO -  * Restarting with stat
+2025-06-20 06:55:50,554 - WARNING -  * Debugger is active!
+2025-06-20 06:56:22,419 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-20 06:56:22,420 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-20 06:56:22,427 - INFO -  * Restarting with stat
+2025-06-20 06:56:41,023 - WARNING -  * Debugger is active!
+2025-06-20 06:56:41,052 - INFO -  * Debugger PIN: 121-500-353
+2025-06-20 06:56:41,689 - INFO - 127.0.0.1 - - [20/Jun/2025 06:56:41] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-20 06:56:41,758 - INFO - 127.0.0.1 - - [20/Jun/2025 06:56:41] "GET /home HTTP/1.1" 200 -
+2025-06-20 06:56:49,129 - INFO - 127.0.0.1 - - [20/Jun/2025 06:56:49] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-20 06:56:54,398 - INFO - 127.0.0.1 - - [20/Jun/2025 06:56:54] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-20 06:57:58,445 - INFO - 127.0.0.1 - - [20/Jun/2025 06:57:58] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-20 06:58:23,310 - INFO - 127.0.0.1 - - [20/Jun/2025 06:58:23] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-20 06:58:27,283 - INFO - 127.0.0.1 - - [20/Jun/2025 06:58:27] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-20 06:58:28,650 - INFO - 127.0.0.1 - - [20/Jun/2025 06:58:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-20 06:58:28,665 - INFO - 127.0.0.1 - - [20/Jun/2025 06:58:28] "GET /home HTTP/1.1" 200 -
+2025-06-20 06:58:30,517 - INFO - 127.0.0.1 - - [20/Jun/2025 06:58:30] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-20 06:58:52,566 - INFO - 127.0.0.1 - - [20/Jun/2025 06:58:52] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-20 06:59:40,782 - INFO - 127.0.0.1 - - [20/Jun/2025 06:59:40] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-20 06:59:48,659 - INFO - 127.0.0.1 - - [20/Jun/2025 06:59:48] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-20 07:00:04,296 - INFO - 127.0.0.1 - - [20/Jun/2025 07:00:04] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-20 07:00:25,633 - INFO - 127.0.0.1 - - [20/Jun/2025 07:00:25] "POST /predict_serpapi HTTP/1.1" 200 -
+2025-06-20 07:00:38,473 - INFO - 127.0.0.1 - - [20/Jun/2025 07:00:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-20 07:00:38,489 - INFO - 127.0.0.1 - - [20/Jun/2025 07:00:38] "GET /home HTTP/1.1" 200 -
+2025-06-20 07:00:39,590 - INFO - 127.0.0.1 - - [20/Jun/2025 07:00:39] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-20 07:11:19,254 - INFO -  * Detected change in 'D:\\btech study\\fake news AI\\News_Sheild\\fake news detection\\main.py', reloading
+2025-06-20 07:11:27,232 - INFO -  * Restarting with stat
+2025-06-20 07:11:47,679 - WARNING -  * Debugger is active!
+2025-06-20 07:11:47,724 - INFO -  * Debugger PIN: 121-500-353
+2025-06-20 07:12:47,934 - INFO - 127.0.0.1 - - [20/Jun/2025 07:12:47] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-20 07:13:17,426 - INFO - 127.0.0.1 - - [20/Jun/2025 07:13:17] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-20 07:13:39,727 - INFO - 127.0.0.1 - - [20/Jun/2025 07:13:39] "GET /real_time_search?query=Iran%20launches%20attack%20on%20Israel HTTP/1.1" 200 -
+2025-06-20 07:13:46,999 - INFO - 127.0.0.1 - - [20/Jun/2025 07:13:46] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-20 07:13:48,302 - INFO - 127.0.0.1 - - [20/Jun/2025 07:13:48] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-21 11:02:59,722 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 11:02:59,724 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 11:02:59,730 - INFO -  * Restarting with stat
+2025-06-21 11:03:21,250 - WARNING -  * Debugger is active!
+2025-06-21 11:03:21,288 - INFO -  * Debugger PIN: 121-500-353
+2025-06-21 11:03:22,381 - INFO - 127.0.0.1 - - [21/Jun/2025 11:03:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-21 11:03:22,428 - INFO - 127.0.0.1 - - [21/Jun/2025 11:03:22] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:03:25,143 - INFO - 127.0.0.1 - - [21/Jun/2025 11:03:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-21 11:03:59,320 - INFO - 127.0.0.1 - - [21/Jun/2025 11:03:59] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-21 11:03:59,336 - INFO - 127.0.0.1 - - [21/Jun/2025 11:03:59] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:04:01,524 - INFO - 127.0.0.1 - - [21/Jun/2025 11:04:01] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:04:04,730 - INFO - 127.0.0.1 - - [21/Jun/2025 11:04:04] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-21 11:04:07,979 - INFO - 127.0.0.1 - - [21/Jun/2025 11:04:07] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-21 11:04:08,001 - INFO - 127.0.0.1 - - [21/Jun/2025 11:04:08] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:04:39,455 - INFO - 127.0.0.1 - - [21/Jun/2025 11:04:39] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:06:43,371 - INFO - 127.0.0.1 - - [21/Jun/2025 11:06:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-21 11:06:43,388 - INFO - 127.0.0.1 - - [21/Jun/2025 11:06:43] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:09:03,645 - INFO - 127.0.0.1 - - [21/Jun/2025 11:09:03] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:09:05,487 - INFO - 127.0.0.1 - - [21/Jun/2025 11:09:05] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:09:34,250 - INFO - 127.0.0.1 - - [21/Jun/2025 11:09:34] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:09:39,658 - INFO - 127.0.0.1 - - [21/Jun/2025 11:09:39] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:09:43,870 - INFO - 127.0.0.1 - - [21/Jun/2025 11:09:43] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-21 11:09:47,692 - INFO - 127.0.0.1 - - [21/Jun/2025 11:09:47] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:10:13,167 - INFO - 127.0.0.1 - - [21/Jun/2025 11:10:13] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-21 11:10:33,141 - INFO - 127.0.0.1 - - [21/Jun/2025 11:10:33] "GET /real_time_search?query=Iran%20Launches%20attack%20on%20Israel HTTP/1.1" 200 -
+2025-06-21 11:10:35,634 - INFO - 127.0.0.1 - - [21/Jun/2025 11:10:35] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:10:43,703 - INFO - 127.0.0.1 - - [21/Jun/2025 11:10:43] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-21 11:10:46,235 - INFO - 127.0.0.1 - - [21/Jun/2025 11:10:46] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:10:48,767 - INFO - 127.0.0.1 - - [21/Jun/2025 11:10:48] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-21 11:10:48,777 - INFO - 127.0.0.1 - - [21/Jun/2025 11:10:48] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:10:50,279 - INFO - 127.0.0.1 - - [21/Jun/2025 11:10:50] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-21 11:11:47,776 - INFO - 127.0.0.1 - - [21/Jun/2025 11:11:47] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-21 11:11:50,211 - INFO - 127.0.0.1 - - [21/Jun/2025 11:11:50] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:12:20,709 - INFO - 127.0.0.1 - - [21/Jun/2025 11:12:20] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:12:45,675 - INFO - 127.0.0.1 - - [21/Jun/2025 11:12:45] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-21 11:14:51,320 - INFO - 127.0.0.1 - - [21/Jun/2025 11:14:51] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:15:14,646 - INFO - 127.0.0.1 - - [21/Jun/2025 11:15:14] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-21 11:19:59,075 - INFO - 127.0.0.1 - - [21/Jun/2025 11:19:59] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:20:04,631 - INFO - 127.0.0.1 - - [21/Jun/2025 11:20:04] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-21 11:20:47,235 - INFO - 127.0.0.1 - - [21/Jun/2025 11:20:47] "POST /predict_dataset HTTP/1.1" 200 -
+2025-06-21 11:20:50,426 - INFO - 127.0.0.1 - - [21/Jun/2025 11:20:50] "GET /real_time_search?query=Iran%20launches%20attack%20on%20Israel HTTP/1.1" 200 -
+2025-06-21 11:21:20,820 - INFO - 127.0.0.1 - - [21/Jun/2025 11:21:20] "GET /real_time_search?query=Iran%20launches%20attack%20on%20Israel HTTP/1.1" 200 -
+2025-06-21 11:21:22,580 - INFO - 127.0.0.1 - - [21/Jun/2025 11:21:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-21 11:21:22,594 - INFO - 127.0.0.1 - - [21/Jun/2025 11:21:22] "GET /home HTTP/1.1" 200 -
+2025-06-21 11:21:35,631 - INFO - 127.0.0.1 - - [21/Jun/2025 11:21:35] "GET /dataset_analysis HTTP/1.1" 200 -
+2025-06-21 11:21:37,218 - INFO - 127.0.0.1 - - [21/Jun/2025 11:21:37] "GET /real_time_search HTTP/1.1" 200 -
+2025-06-21 11:21:38,712 - INFO - 127.0.0.1 - - [21/Jun/2025 11:21:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-06-21 11:21:38,728 - INFO - 127.0.0.1 - - [21/Jun/2025 11:21:38] "GET /home HTTP/1.1" 200 -

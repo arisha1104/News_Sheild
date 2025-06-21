@@ -1,131 +1,156 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Real-Time News Results</title>
-     <style>
-         body {
-             font-family: 'Arial', sans-serif;
-             background-color: #121212;
-             color: #ffffff;
-             margin: 0;
-             padding: 20px;
-             text-align: center;
-         }
- 
-         h1 {
-             font-size: 36px;
-             margin-bottom: 30px;
-             color: #ffffff;
-             border-bottom: 2px solid #ffffff33;
-             padding-bottom: 10px;
-         }
- 
-         ul {
-             list-style: none;
-             padding: 0;
-             max-width: 900px;
-             margin: auto;
-         }
- 
-         li {
-             background-color: #1f1f1f;
-             border: 1px solid #ffffff33;
-             border-radius: 10px;
-             padding: 20px;
-             margin-bottom: 20px;
-             text-align: left;
-             animation: fadeIn 0.5s ease-in-out;
-         }
- 
-         li h3 {
-             font-size: 22px;
-             margin-bottom: 10px;
-         }
- 
-         li h3 a {
-             text-decoration: none;
-             color: #00bcd4;
-         }
- 
-         li p {
-             font-size: 16px;
-             margin: 8px 0;
-         }
- 
-         .badge {
-             padding: 5px 12px;
-             border-radius: 20px;
-             font-weight: bold;
-             color: white;
-             font-size: 14px;
-             display: inline-block;
-         }
- 
-         .real-news {
-             background-color: #4CAF50;
-         }
- 
-         .fake-news {
-             background-color: #F44336;
-         }
- 
-         .back-link {
-             margin-top: 30px;
-             display: inline-block;
-             padding: 10px 20px;
-             background-color: #ff5722;
-             color: white;
-             text-decoration: none;
-             border-radius: 5px;
-             transition: 0.3s;
-         }
- 
-         .back-link:hover {
-             background-color: #e64a19;
-         }
- 
-         @keyframes fadeIn {
-             from { opacity: 0; transform: translateY(20px); }
-             to { opacity: 1; transform: translateY(0); }
-         }
- 
-         .section-header {
-             font-size: 20px;
-             color: #cccccc;
-             margin-top: 40px;
-             margin-bottom: 15px;
-             border-top: 1px solid #ffffff33;
-             padding-top: 15px;
-             text-align: left;
-         }
-     </style>
- </head>
- <body>
-     <h1>📰 Real-Time News Results</h1>
- 
-     {% if articles %}
-         <ul>
-             {% for article in articles %}
-                 <li>
-                     <h3>🔗 <a href="{{ article['url'] }}" target="_blank">{{ article['title'] }}</a></h3>
-                     <p>📝 {{ article['description'] }}</p>
-                     <p><strong>Prediction:</strong> 
-                         <span class="badge {% if article['label'] == 'Real News' %}real-news{% else %}fake-news{% endif %}">
-                             {{ article['label'] }}
-                         </span>
-                     </p>
-                 </li>
-             {% endfor %}
-         </ul>
-     {% else %}
-         <p>No articles found for the given query.</p>
-     {% endif %}
- 
-     <a href="/real_time_search" class="back-link">🔙 Back to Search</a>
- </body>
- </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Fake News Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25px 25px, rgba(255,255,255,0.2) 2px, transparent 0); background-size: 50px 50px;"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="fixed left-0 top-0 h-full w-64 glass-effect text-white p-6 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-50" id="sidebar">
+        <div class="flex flex-col h-full">
+            <!-- Logo -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-center">
+                    <i class="fas fa-shield-alt text-blue-400 mr-2"></i>
+                    News Shield
+                </h2>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex-1">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="/" class="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <i class="fas fa-home mr-3"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dataset_analysis" class="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <i class="fas fa-database mr-3"></i>
+                            Dataset Analysis
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/real_time_search" class="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <i class="fas fa-search mr-3"></i>
+                            Real-time Search
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Logout Button -->
+            <div class="mt-auto pt-6 border-t border-white/20">
+                <p class="text-xs text-center text-white/70">
+                    © 2025 News Shield<br>
+                    Fake News Detection System
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden fixed top-4 left-4 z-50 bg-white/20 text-white p-2 rounded-lg" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="lg:ml-64 min-h-screen p-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-8">
+                <h1 class="text-3xl font-bold text-white flex items-center">
+                    <i class="fas fa-search text-blue-400 mr-3"></i>
+                    Search Results
+                </h1>
+                <a href="/real_time_search" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>New Search
+                </a>
+            </div>
+
+            <!-- Results -->
+            <div class="space-y-6">
+                {% if articles %}
+                    {% for article in articles %}
+                    <div class="glass-effect rounded-lg p-6 fade-in" style="animation-delay: {{ (loop.index0 * 0.1)|round(2) }}s;">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h2 class="text-xl font-semibold text-white mb-2">
+                                    <a href="{{ article.url }}" target="_blank" class="hover:text-blue-400 transition-colors">
+                                        {{ article.title }}
+                                    </a>
+                                </h2>
+                                <p class="text-white/70 text-sm">
+                                    <i class="fas fa-newspaper mr-2"></i>{{ article.source.name }}
+                                    <span class="mx-2">•</span>
+                                    <i class="fas fa-calendar mr-2"></i>{{ article.publishedAt }}
+                                </p>
+                            </div>
+                            <a href="{{ article.url }}" target="_blank" class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-lg hover:bg-blue-500/30 transition-colors text-sm">
+                                <i class="fas fa-external-link-alt mr-1"></i>Read
+                            </a>
+                        </div>
+                        <p class="text-white/80 mb-4">{{ article.description }}</p>
+                        {% if article.urlToImage %}
+                        <div class="relative h-48 rounded-lg overflow-hidden mb-4">
+                            <img src="{{ article.urlToImage }}" alt="{{ article.title }}" class="w-full h-full object-cover">
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="glass-effect rounded-lg p-8 text-center">
+                        <i class="fas fa-search text-4xl text-white/50 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-white mb-2">No Results Found</h3>
+                        <p class="text-white/70">Try adjusting your search terms or try a different query.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 1024 && !sidebar.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+    </script>
+</body>
+</html>
   
 
  

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Analysis - Fake News Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25px 25px, rgba(255,255,255,0.2) 2px, transparent 0); background-size: 50px 50px;"></div>
+    </div>
+    <!-- Sidebar -->
+    <div class="fixed left-0 top-0 h-full w-64 glass-effect text-white p-6 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-50" id="sidebar">
+        <div class="flex flex-col h-full">
+            <!-- Logo -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-center">
+                    <i class="fas fa-shield-alt text-blue-400 mr-2"></i>
+                    News Shield
+                </h2>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex-1">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="/" class="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <i class="fas fa-home mr-3"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dataset_analysis" class="flex items-center p-3 rounded-lg bg-green-500/20 text-green-400 border border-green-400/30">
+                            <i class="fas fa-database mr-3"></i>
+                            Dataset Analysis
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/real_time_search" class="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <i class="fas fa-search mr-3"></i>
+                            Real-time Search
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Copyright -->
+            <div class="mt-auto pt-6 border-t border-white/20">
+                <p class="text-xs text-center text-white/70">
+                    © 2025 News Shield<br>
+                    Fake News Detection System
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden fixed top-4 left-4 z-50 bg-white/20 text-white p-2 rounded-lg" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Main Content -->
+    <div class="lg:ml-64 min-h-screen flex items-center justify-center px-4 py-12">
+        <div class="w-full max-w-2xl glass-effect rounded-2xl p-8 fade-in">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center flex items-center justify-center">
+                <i class="fas fa-database text-green-400 mr-3"></i> Dataset Fake News Analysis
+            </h2>
+            <form id="datasetForm" class="mb-6">
+                <textarea 
+                    id="datasetInput" 
+                    name="query" 
+                    placeholder="Enter your news text for dataset analysis..." 
+                    required 
+                    class="w-full h-40 p-4 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-green-400 mb-4 resize-none"
+                ></textarea>
+                <button 
+                    type="submit" 
+                    class="w-full py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition-colors flex items-center justify-center"
+                    id="datasetSearchButton"
+                >
+                    <span id="datasetButtonText">
+                        <i class="fas fa-database mr-2"></i>Analyze with Dataset
+                    </span>
+                    <span id="datasetButtonSpinner" class="hidden">
+                        <i class="fas fa-spinner fa-spin mr-2"></i>Analyzing...
+                    </span>
+                </button>
+            </form>
+            <div class="result-box bg-white/10 border border-white/20 rounded-lg p-6 text-white" id="datasetResultBox" style="display: none;">
+                <div id="predictionContent">
+                    <p class="mb-2"><span class="font-bold text-blue-300">Result:</span> <span id="datasetResult"></span></p>
+                    <p class="mb-2"><span class="font-bold text-green-300">Confidence:</span> <span id="datasetConfidence"></span></p>
+                    <p class="mb-4"><span class="font-bold text-purple-300">Justification:</span> <span id="datasetJustification"></span></p>
+                </div>
+
+                <div id="noMatchContent" style="display: none;">
+                    <p class="text-center text-lg font-semibold text-white">No match found in dataset.</p>
+                    <p class="text-center text-white/80 mt-2">Please perform a real-time analysis for a comprehensive check.</p>
+                </div>
+
+                <!-- Container for related articles from the dataset -->
+                <div id="datasetArticlesContainer" class="mt-6">
+                    <h4 id="datasetArticlesHeader" class="text-lg font-bold text-yellow-300 mb-2" style="display: none;">Related Articles from Dataset:</h4>
+                    <ul id="datasetArticlesList" class="space-y-4"></ul>
+                </div>
+                
+                <!-- Button for Real-time Analysis Fallback -->
+                <button id="realtimeFallbackBtn" class="mt-4 w-full py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition-colors flex items-center justify-center" style="display: none;">
+                    <i class="fas fa-bolt mr-2"></i>Perform Real-time Analysis
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        mobileMenuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 1024 && !sidebar.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+        // Dataset analysis form logic
+        const datasetForm = document.getElementById('datasetForm');
+        const datasetButtonText = document.getElementById('datasetButtonText');
+        const datasetButtonSpinner = document.getElementById('datasetButtonSpinner');
+        const datasetResultBox = document.getElementById('datasetResultBox');
+        const datasetResult = document.getElementById('datasetResult');
+        const datasetConfidence = document.getElementById('datasetConfidence');
+        const datasetJustification = document.getElementById('datasetJustification');
+        const datasetSearchButton = document.getElementById('datasetSearchButton');
+        const datasetArticlesList = document.getElementById('datasetArticlesList');
+        const datasetArticlesHeader = document.getElementById('datasetArticlesHeader');
+        const realtimeFallbackBtn = document.getElementById('realtimeFallbackBtn');
+        const predictionContent = document.getElementById('predictionContent');
+        const noMatchContent = document.getElementById('noMatchContent');
+
+        datasetForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const query = document.getElementById('datasetInput').value.trim();
+            if (!query) return;
+
+            // Reset UI
+            datasetResultBox.style.display = 'none';
+            datasetArticlesList.innerHTML = '';
+            datasetArticlesHeader.style.display = 'none';
+            realtimeFallbackBtn.style.display = 'none';
+            predictionContent.style.display = 'none';
+            noMatchContent.style.display = 'none';
+            
+            // Show loading state
+            datasetButtonText.classList.add('hidden');
+            datasetButtonSpinner.classList.remove('hidden');
+            datasetSearchButton.disabled = true;
+
+            try {
+                const response = await fetch('/predict_dataset', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ news: query })
+                });
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || 'An error occurred');
+                }
+
+                if (data.source === 'model') {
+                    // No match found, prompt for real-time analysis
+                    noMatchContent.style.display = 'block';
+                    realtimeFallbackBtn.style.display = 'flex';
+                    realtimeFallbackBtn.onclick = () => {
+                        const searchUrl = `/real_time_search?query=${encodeURIComponent(query)}`;
+                        window.location.href = searchUrl;
+                    };
+                } else {
+                    // Match found in dataset, display results
+                    predictionContent.style.display = 'block';
+                    datasetResult.innerText = data.result;
+                    datasetConfidence.innerText = data.confidence;
+                    datasetJustification.innerText = data.justification;
+
+                    // Display related articles if they exist
+                    if (data.related_articles && data.related_articles.length > 0) {
+                        datasetArticlesHeader.style.display = 'block';
+                        data.related_articles.forEach(article => {
+                            const li = document.createElement('li');
+                            li.className = 'p-4 bg-white/5 rounded-lg';
+                            li.innerHTML = `
+                                <h5 class="font-bold text-blue-300 mb-1">${article.title}</h5>
+                                <p class="text-white/80 text-sm mb-2">${article.snippet}</p>
+                                <div class="text-xs text-white/60">
+                                    <span>Source: ${article.source}</span>
+                                </div>
+                            `;
+                            datasetArticlesList.appendChild(li);
+                        });
+                    }
+                }
+                
+                datasetResultBox.style.display = 'block';
+            } catch (error) {
+                alert(error.message);
+            } finally {
+                datasetButtonText.classList.remove('hidden');
+                datasetButtonSpinner.classList.add('hidden');
+                datasetSearchButton.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html> 

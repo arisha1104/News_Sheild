@@ -3,107 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time News Search</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: white;
-            overflow-y: auto;
-            height: 100vh;
-            overflow-x: hidden;
+    <title>Real-time Search - Fake News Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('/static/rishabh-sharma-R-js25Pv1LQ-unsplash.jpg') no-repeat center center fixed;
-            background-size: cover;
-            animation: zoomMove 30s infinite alternate linear;
-            z-index: -1;
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-
-        @keyframes zoomMove {
-            0% {
-                transform: scale(1);
-                background-position: center center;
-            }
-            100% {
-                transform: scale(1.1);
-                background-position: center bottom;
-            }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
         }
-
-        .container {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 0;
-            margin-top: 120px;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
-            width: 100%;
-            border-top: 2px solid white;
-            border-bottom: 2px solid white;
-        }
-
-        input[type="text"] {
-            width: 70%;
-            height: 40px;
-            padding: 10px;
-            margin: 20px auto;
-            border-radius: 5px;
-            border: none;
-            font-size: 16px;
-            display: block;
-        }
-
-        button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #ff5722;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #e64a19;
-        }
-
-        h1 {
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-        }
-
-        /* Message styling */
-        .message {
-            color: #ff5722;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-    </style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
-<body>
-    <div class="background"></div>
-
-    <div class="container">
-        <h1>Search for Real-Time News</h1>
-        <form action="/real_time_search" method="POST">
-            <input type="text" name="query" placeholder="Enter search query" required>
-            <button type="submit">Search</button>
-        </form>
-
-        {% if message %}
-        <div class="message">{{ message }}</div>
-        {% endif %}
+<body class="min-h-screen gradient-bg">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25px 25px, rgba(255,255,255,0.2) 2px, transparent 0); background-size: 50px 50px;"></div>
     </div>
+
+    <!-- Sidebar -->
+    <div class="fixed left-0 top-0 h-full w-64 glass-effect text-white p-6 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-50" id="sidebar">
+        <div class="flex flex-col h-full">
+            <!-- Logo -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-center">
+                    <i class="fas fa-shield-alt text-blue-400 mr-2"></i>
+                    News Shield
+                </h2>
+            </div>
+            <!-- Navigation -->
+            <nav class="flex-1">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="/" class="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <i class="fas fa-home mr-3"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dataset_analysis" class="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <i class="fas fa-database mr-3"></i>
+                            Dataset Analysis
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/real_time_search" class="flex items-center p-3 rounded-lg bg-blue-500/20 text-blue-400 border border-blue-400/30">
+                            <i class="fas fa-search mr-3"></i>
+                            Real-time Search
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Logout Button -->
+            <div class="mt-auto pt-6 border-t border-white/20">
+                <p class="text-xs text-center text-white/70">
+                    © 2025 News Shield<br>
+                    Fake News Detection System
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden fixed top-4 left-4 z-50 bg-white/20 text-white p-2 rounded-lg" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+  
+
+    <!-- Main Content -->
+    <div class="lg:ml-64 min-h-screen flex items-center justify-center px-4 py-12">
+        <div class="w-full max-w-2xl glass-effect rounded-2xl p-8 fade-in">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center flex items-center justify-center">
+                <i class="fas fa-search text-blue-400 mr-3"></i> Real-time Fake News Search
+            </h2>
+            {% if error %}
+            <div class="bg-red-500/20 border border-red-500/30 text-red-400 px-4 py-3 rounded-lg text-sm mb-6">
+                <i class="fas fa-exclamation-circle mr-2"></i>{{ error }}
+            </div>
+            {% endif %}
+            <form id="newsForm" class="mb-6" method="POST" action="/real_time_search">
+                <textarea 
+                    id="newsInput" 
+                    name="query" 
+                    placeholder="Enter your search query (e.g., 'latest technology news', 'breaking news', etc.)..." 
+                    required 
+                    class="w-full h-40 p-4 rounded-lg border border-white/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4 resize-none"
+                ></textarea>
+                <div class="flex gap-4 mb-4">
+                    <button 
+                        type="button" 
+                        class="w-full py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition-colors flex items-center justify-center"
+                        id="realtimeBtn"
+                    >
+                        <span><i class="fas fa-bolt mr-2"></i>Real-time Analysis</span>
+                    </button>
+                </div>
+            </form>
+            <div class="text-center text-white/70 text-sm">
+                <p class="mb-2">Search tips:</p>
+                <ul class="space-y-1">
+                    <li><i class="fas fa-info-circle mr-1"></i>Use specific keywords for better results</li>
+                    <li><i class="fas fa-info-circle mr-1"></i>Try different combinations of words</li>
+                    <li><i class="fas fa-info-circle mr-1"></i>Include relevant dates or time periods</li>
+                </ul>
+            </div>
+            <div class="spinner text-center text-white mb-4" id="spinner" style="display: none;">
+    <p>🔍 Analyzing news... Please wait.</p>
+  </div>
+            <div class="result-box bg-white/10 border border-white/20 rounded-lg p-6 text-white" id="resultBox" style="display: none;">
+                <p class="mb-2"><span class="font-bold text-blue-300">Result:</span> <span id="result"></span></p>
+                <p class="mb-2"><span class="font-bold text-green-300">Confidence:</span> <span id="confidence"></span></p>
+                <p class="mb-4"><span class="font-bold text-purple-300">Justification:</span> <span id="justification"></span></p>
+    <div class="related-articles">
+                    <p class="font-bold text-yellow-300 mb-2">Related Articles:</p>
+      <ul id="articlesList"></ul>
+                </div>
+            </div>
+    </div>
+  </div>
+
+  <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        mobileMenuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 1024 && !sidebar.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+        // Language selector functionality
+        const languageSelect = document.querySelector('select');
+        languageSelect.addEventListener('change', (e) => {
+            const option = e.target.selectedOptions[0];
+            option.textContent = 'Loading...';
+            setTimeout(() => { location.reload(); }, 500);
+        });
+        // Form logic
+    const form = document.getElementById('newsForm');
+        const buttonText = document.getElementById('buttonText');
+        const buttonSpinner = document.getElementById('buttonSpinner');
+    const spinner = document.getElementById('spinner');
+    const resultBox = document.getElementById('resultBox');
+    const result = document.getElementById('result');
+    const confidence = document.getElementById('confidence');
+    const justification = document.getElementById('justification');
+    const articlesList = document.getElementById('articlesList');
+    const searchButton = document.getElementById('searchButton');
+    const realtimeBtn = document.getElementById('realtimeBtn');
+    const datasetBtn = document.getElementById('datasetBtn');
+
+    async function handlePrediction(endpoint) {
+        const query = document.getElementById('newsInput').value.trim();
+        if (!query) return;
+        resultBox.style.display = 'none';
+        spinner.style.display = 'block';
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ news: query })
+            });
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error || 'An error occurred');
+            }
+            spinner.style.display = 'none';
+            result.innerText = data.result;
+            confidence.innerText = data.confidence;
+            justification.innerText = data.justification;
+            articlesList.innerHTML = '';
+            if (Array.isArray(data.related_articles)) {
+                data.related_articles.forEach(article => {
+                    const li = document.createElement('li');
+                    li.className = 'mb-4 p-4 bg-white/5 rounded-lg';
+                    li.innerHTML = `
+                        <h3 class="font-bold text-blue-300 mb-2">
+                            <a href="${article.url}" target="_blank" class="hover:text-blue-400">
+                                ${article.title}
+                            </a>
+                        </h3>
+                        <p class="text-white/80 mb-2">${article.snippet || 'No description available'}</p>
+                        <div class="text-sm text-white/60">
+                            <span class="mr-4">
+                                <i class="fas fa-newspaper mr-1"></i>${article.source}
+                            </span>
+                        </div>
+                    `;
+                    articlesList.appendChild(li);
+                });
+            }
+            resultBox.style.display = 'block';
+        } catch (error) {
+            spinner.style.display = 'none';
+            alert(error.message);
+        }
+    }
+
+    realtimeBtn.addEventListener('click', () => {
+        handlePrediction('/predict_serpapi');
+    });
+    datasetBtn.addEventListener('click', () => {
+        handlePrediction('/predict_dataset');
+    });
+
+    // This script will run when the page loads to check for a query in the URL
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query');
+        if (query) {
+            document.getElementById('newsInput').value = query;
+        }
+    });
+  </script>
 </body>
 </html>
